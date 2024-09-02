@@ -1,5 +1,3 @@
-import { CSSProperties } from "react";
-
 export interface CleanLoaderProps {
   children: React.ReactNode;
   waitFor: any;
