@@ -1,7 +1,10 @@
 {
-  "name": "react-clean-loader",
+  "name": "@380086m/react-clean-loader",
   "version": "1.0.0",
   "description": "A React component that simplifies loading states, eliminating the need for ternary operators to conditionally render loaders.",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/380086m"
+  },
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
