@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/animations.css";
 import { ImageIcon, VideoIcon } from "./SvgIcons";
 
 export const GhostLoader = ({
@@ -15,6 +14,20 @@ export const GhostLoader = ({
   borderRadius: number;
   style?: React.CSSProperties;
 }) => {
+  const pulseAnimation = `
+    @keyframes pulse {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.4;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  `;
+
   let svgContent: JSX.Element | null = null;
 
   if (type === "image") {
@@ -37,6 +50,7 @@ export const GhostLoader = ({
         ...style,
       }}
     >
+      <style>{pulseAnimation}</style>
       {svgContent}
     </div>
   );
